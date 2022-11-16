@@ -480,7 +480,7 @@ img {
 	margin-bottom: 20px;
 	text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
-.footer-studio {
+.footer__logo--span {
 	color: var(--white-cl);
 }
 .address {
@@ -489,7 +489,7 @@ img {
 	text-decoration: none;
 }
 /* !!!!!!!footer-address!!!!!!! */
-.address-items {
+.address__items {
 	display: flex;
 	flex-direction: column;
 	gap: 9px;
@@ -498,16 +498,50 @@ img {
 	transition: color var(--transition);
 }
 
-.address-item {
+.address__link {
 	color: var(--white-cl);
 }
-.address-item:hover,
-.address-item:focus {
+.address__link:hover,
+.address__link:focus {
 	color: var(--accent-txt-cl);
 }
 
 .contacts {
 	color: var(--contact-cl);
+}
+/* contactus section */
+.contactus {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.contactus__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: #484a50;
+	fill: var(--white-cl);
+	box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+	transition: fill var(--transition), background-color var(--transition);
+}
+.contactus__link:hover,
+.contactus__link:focus {
+	fill: var(--white-cl);
+	background-color: var(--accent-txt-cl);
+}
+.contactus__title {
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: 0.03em;
+	text-align: left;
+	color: var(--white-cl);
+	margin-bottom: 20px;
 }
 /* footer-online */
 .online__container {
@@ -575,56 +609,23 @@ img {
 .online__svg--submit {
 	fill: var(--white-cl);
 }
-/* contactus section */
-.contactus {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-}
-.contactus-link {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
-	background-color: #484a50;
-	fill: var(--white-cl);
-	box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-	transition: fill var(--transition), background-color var(--transition);
-}
-.contactus-link:hover,
-.contactus-link:focus {
-	fill: var(--white-cl);
-	background-color: var(--accent-txt-cl);
-}
-.contactus-title {
-	font-family: Roboto;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 16px;
-	letter-spacing: 0.03em;
-	text-align: left;
-	color: var(--white-cl);
-	margin-bottom: 20px;
-}
+/* !!!!!!!!!!footer end!!!!!!!!!! */
 
 /* portfolio page */
 
-.portfolio-section {
+.portfolio__section {
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
 
-.btn-items {
+.portfolio__button--items {
 	display: flex;
 	gap: 8px;
 	margin-bottom: 50px;
 	justify-content: center;
 }
 
-.btn-portfolio {
+.portfolio__button {
 	font-weight: 500;
 	font-size: 16px;
 	padding: 6px 22px;
@@ -634,44 +635,44 @@ img {
 	transition: color var(--transition), background-color var(--transition),
 		box-shadow var(--transition);
 }
-.btn-portfolio-dark {
+.portfolio__button--dark {
 	color: var(--main-txt-cl);
 }
-.btn-portfolio-dark:hover,
-.btn-portfolio-dark:focus,
-.btn-portfolio-dark-current {
+.portfolio__button--dark:hover,
+.portfolio__button--dark:focus,
+.portfolio__button--current {
 	color: var(--white-cl);
 	background-color: var(--accent-txt-cl);
 	box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
 		0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-name-sites {
+.portfolio__wrapper--name {
 	font-weight: 700;
 	font-size: 18px;
 	line-height: calc(36 / 18);
 	letter-spacing: 0.06em;
 	margin-bottom: 4px;
 }
-.portfolio-about-sites {
+.portfolio__wrapper--about {
 	font-size: 16px;
 	line-height: calc(30 / 16);
 	color: #757575;
 }
-.portfolio-item {
+.portfolio__item {
 	flex-basis: calc ((100% - 2 * 30px) / 3);
 }
 
-.portfolio-item:hover .portfolio-card-text {
+.portfolio__item:hover .portfolio__card--text {
 	transform: translateY(0);
 }
 
-.portfolio-item:hover {
+.portfolio__item:hover {
 	box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
 		0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-card-text {
+.portfolio__card--text {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -691,7 +692,7 @@ img {
 	overflow: auto;
 }
 
-.portfolio-card-wrap {
+.portfolio__card--wrap {
 	position: relative;
 	overflow: hidden;
 }
@@ -707,7 +708,6 @@ img {
 /* socials icons */
 
 /* backdrop section */
-/* modal window */
 .backdrop {
 	position: fixed;
 	width: 100%;
@@ -717,38 +717,16 @@ img {
 	transition: opacity var(--modal-transition), visibility var(--modal-transition);
 }
 
-.backdrop-btn {
-	width: 30px;
-	height: 30px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 50%;
-	background-color: transparent;
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
-	cursor: pointer;
-	outline-color: transparent;
-}
-.modal-close-icon .backdrop-btn:focus,
-.backdrop-btn:hover {
-	transition: var(--transition);
-	fill: var(--accent-txt-cl);
-}
-
 .backdrop.is-hidden .modal {
 	transform: translate(-50%, -50%) scale(0);
 }
-
+/* коли сховано */
 .is-hidden {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
 }
-
+/* modal window */
 .modal {
 	position: absolute;
 	min-width: 528px;
@@ -765,7 +743,29 @@ img {
 	padding: 40px;
 }
 
-.modal-title {
+.modal__button--close {
+	width: 30px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	background-color: transparent;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	cursor: pointer;
+	outline-color: transparent;
+}
+.modal__icon--close .modal__button--close:focus,
+.modal__button--close:hover {
+	transition: var(--transition);
+	fill: var(--accent-txt-cl);
+}
+
+.modal__title {
 	font-family: Roboto;
 	font-size: 20px;
 	font-weight: 700;
@@ -775,18 +775,18 @@ img {
 	margin-bottom: 12px;
 }
 
-.modal-field {
+.modal__client--field {
 	margin-bottom: 10px;
 }
 
-.privacy-modal-field {
+.modal__privacy--field {
 	margin-top: 10px;
 	margin-bottom: 30px;
 	padding-left: 14px;
 	padding-right: 11px;
 }
-
-.modal-label {
+/* !!поля для вводу в модалці */
+.modal__label {
 	font-family: var(--main-font);
 	font-size: 12px;
 	line-height: 14px;
@@ -794,11 +794,11 @@ img {
 	color: #757575;
 }
 
-.input-wrap {
+.modal__input--wrap {
 	position: relative;
 }
 
-.modal-input {
+.modal__input--client {
 	width: 100%;
 	height: 40px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
@@ -807,7 +807,7 @@ img {
 	outline-color: transparent;
 }
 
-.modal-input:focus {
+.modal__input--client:focus {
 	color: var(--accent-txt-cl);
 	border: 3px solid var(--accent-txt-cl);
 	border-radius: 4px;
@@ -816,19 +816,19 @@ img {
 
 /* щоб фокус на вікні вводу ціпляв зміну 
 кольору іконки  */
-.modal-input:focus + .modal-input-icon {
+.modal__input--client:focus + .modal__input--icon {
 	fill: var(--accent-txt-cl);
 	transition: var(--transition);
 }
 
-.modal-input-icon {
+.modal__input--icon {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	left: 12px;
 }
 
-.modal-comment {
+.modal__comment {
 	width: 100%;
 	height: 120px;
 	font-size: 12px;
@@ -842,14 +842,14 @@ img {
 	outline-color: transparent;
 }
 
-.modal-comment:focus {
+.modal__comment:focus {
 	color: var(--accent-txt-cl);
 	border: 3px solid var(--accent-txt-cl);
 	border-radius: 4px;
 	transition: var(--transition);
 }
 
-.checkbox-text {
+.privacy__checkbox--text {
 	font-family: var(--main-font);
 	font-size: 14px;
 	line-height: 24px;
@@ -859,7 +859,7 @@ img {
 	align-items: center;
 }
 
-.checkbox-text .privacy-check-span {
+.privacy__checkbox--text .privacy__check--span {
 	content: '';
 	width: 16px;
 	height: 16px;
@@ -872,36 +872,36 @@ img {
 	fill: transparent;
 }
 /* при натисканні на галочку відбувається зміна кольору бекграунда та галочки */
-.input-checkbox:checked + .checkbox-text .privacy-check-span {
+.privacy__input--checkbox:checked + .privacy__checkbox--text .privacy__check--span {
 	background-color: var(--accent-txt-cl);
 	border-color: transparent;
 	fill: var(--white-cl);
 	transition: var(--modal-transition);
 }
 /* при фокусі буде краситись рамочка */
-.input-checkbox:focus + .checkbox-text .privacy-check-span,
-.input-checkbox:hover + .checkbox-text .privacy-check-span {
+.privacy__input--checkbox:focus + .privacy__checkbox--text .privacy__check--span,
+.privacy__input--checkbox:hover + .privacy__checkbox--text .privacy__check--span {
 	border-color: var(--accent-txt-cl);
 	transition: var(--modal-transition);
 }
 
-.privacy-check-icon {
+.privacy__check--icon {
 	position: absolute;
 }
 
-.checkbox-span {
+.checkbox__span--text {
 	color: var(--accent-txt-cl);
 	text-decoration-line: underline;
 	padding-left: 5px;
 }
 
-.modal-container-button {
+.privacy__button--container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.modal-btn {
+.privacy__button--submit {
 	width: 200px;
 	height: 50px;
 	color: var(--white-cl);
