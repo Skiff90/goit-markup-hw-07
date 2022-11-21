@@ -12,9 +12,10 @@
 	--black-cl: #000000;
 	--contact-cl: rgba(255, 255, 255, 0.6);
 	--color-wrapper: #eeeeee;
+	--active-accent-color: #1a81bd;
 	/* hero-button-vars */
 	--hero-button-text: #ffffff;
-	--hero-button-beckground-is-activ: #1a81bd;
+
 	/* background-color */
 	--Color-background: #2f303a;
 	/* others */
@@ -242,7 +243,7 @@ img {
 
 .hero__main {
 	margin-bottom: 30px;
-	width: 696px;
+	min-width: 696px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -265,7 +266,7 @@ img {
 .hero__button:hover,
 .hero__button:focus {
 	color: var(--hero-button-text);
-	background-color: var(--hero-button-beckground-is-activ);
+	background-color: var(--active-accent-color);
 	transition: var(--transition);
 }
 /* 
@@ -517,14 +518,24 @@ img {
 .contacts {
 	color: var(--contact-cl);
 }
-/* contactus section */
-.contactus {
+/*footer__join-us section */
+.join-us__title {
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: 0.03em;
+	text-align: left;
+	color: var(--white-cl);
+	margin-bottom: 20px;
+}
+.join-us__items {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
 }
-.contactus__link {
+.join-us__link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -536,21 +547,12 @@ img {
 	box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 	transition: fill var(--transition), background-color var(--transition);
 }
-.contactus__link:hover,
-.contactus__link:focus {
+.join-us__link:hover,
+.join-us__link:focus {
 	fill: var(--white-cl);
 	background-color: var(--accent-txt-cl);
 }
-.contactus__title {
-	font-family: Roboto;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 16px;
-	letter-spacing: 0.03em;
-	text-align: left;
-	color: var(--white-cl);
-	margin-bottom: 20px;
-}
+
 /* footer-online */
 .online__container {
 	display: flex;
