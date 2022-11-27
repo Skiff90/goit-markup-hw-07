@@ -22,7 +22,7 @@
 }
 
 .header__logo--span {
-    color: yellow;
+    color: #000000;
 }
 
 .header__nav {
@@ -53,6 +53,11 @@
     color: var(--black-cl);
     text-decoration: none;
     transition: var(--transition);
+    &:hover,
+    &:focus {
+        color: var(--accent-txt-cl);
+        fill: var(--accent-txt-cl);
+    }
 }
 
 .nav__link--current {
@@ -73,13 +78,9 @@
     transition: color var(--transition);
 }
 
-.nav__link:hover,
-.nav__link:focus,
-.contact__item:hover,
-.contact__item:focus {
-    color: var(--accent-txt-cl);
-    fill: var(--accent-txt-cl);
-}
+
+
+
 
 .contact__items {
     display: flex;
@@ -91,4 +92,9 @@
     fill: var(--grey-cl);
     color: var(--grey-cl);
     transition: fill var(--transition), color var(--transition);
+    &:hover,
+    &:focus {
+        color: var(--accent-txt-cl);
+        fill: var(--accent-txt-cl);
+    }
 }

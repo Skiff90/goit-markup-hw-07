@@ -1,10 +1,15 @@
 @import './utils/vars';
 @import './utils/reset';
 @import './utils/card-set';
-@import './utils/base';
 @import './utils/visually-hidden';
 
+@import './components/base';
 @import './components/container';
+@import './components/section';
+@import './components/uppertitle';
+@import './components/modal';
+
+
 
 @import './layouts/portfolio';
 @import './layouts/header';

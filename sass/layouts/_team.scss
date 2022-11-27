@@ -50,10 +50,10 @@
     background-color: #ffffff;
     border-radius: 50%;
     transition: fill var(--transition), background-color var(--transition);
+    &:hover,
+    &:focus {
+        fill: var(--white-cl);
+        background-color: var(--accent-txt-cl);
+    }
 }
 
-.social__link:hover,
-.social__link:focus {
-    fill: var(--white-cl);
-    background-color: var(--accent-txt-cl);
-}

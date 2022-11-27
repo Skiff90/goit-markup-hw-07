@@ -23,10 +23,18 @@
 
 .portfolio__button--dark {
     color: var(--main-txt-cl);
+    &:hover,
+    &:focus {
+        color: var(--white-cl);
+        background-color: var(--accent-txt-cl);
+        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    }
 }
 
-.portfolio__button--dark:hover,
-.portfolio__button--dark:focus,
+
+
+
 .portfolio__button--current {
     color: var(--white-cl);
     background-color: var(--accent-txt-cl);
@@ -50,16 +58,17 @@
 
 .portfolio__item {
     flex-basis: calc ((100% - 2 * 30 px) / 3);
+    &:hover {
+        box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    }
 }
 
 .portfolio__item:hover .portfolio__card--text {
     transform: translateY(0);
 }
 
-.portfolio__item:hover {
-    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-}
+
 
 .portfolio__card--text {
     position: absolute;

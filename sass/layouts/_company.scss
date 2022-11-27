@@ -27,10 +27,10 @@
     transition: fill var(--transition),
     background-color var(--transition),
     border var(--transition);
+    &:hover,
+    &:focus {
+        fill: var(--accent-txt-cl);
+        border: 1px solid var(--accent-txt-cl);
+    }
 }
 
-.company__link:hover,
-.company__link:focus {
-    fill: var(--accent-txt-cl);
-    border: 1px solid var(--accent-txt-cl);
-}

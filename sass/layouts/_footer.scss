@@ -46,12 +46,13 @@
 
 .address__link {
     color: var(--white-cl);
+    &:hover,
+    &:focus {
+        color: var(--accent-txt-cl);
+    }
 }
 
-.address__link:hover,
-.address__link:focus {
-    color: var(--accent-txt-cl);
-}
+
 
 .contacts {
     color: var(--contact-cl);
@@ -87,13 +88,14 @@
     fill: var(--white-cl);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     transition: fill var(--transition), background-color var(--transition);
+    &:hover,
+    &:focus {
+        fill: var(--white-cl);
+        background-color: var(--accent-txt-cl);
+    }
 }
 
-.join-us__link:hover,
-.join-us__link:focus {
-    fill: var(--white-cl);
-    background-color: var(--accent-txt-cl);
-}
+
 
 /* footer-online */
 .online__container {
@@ -150,14 +152,15 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--active-accent-color);
+        transition: var(--transition);
+    }
 }
 
-.online__button--submit:hover,
-.online__button--submit:focus,
-.online__button--submit:active {
-    background-color: var(--active-accent-color);
-    transition: var(--transition);
-}
+
 
 .online__svg--submit {
     fill: var(--white-cl);
