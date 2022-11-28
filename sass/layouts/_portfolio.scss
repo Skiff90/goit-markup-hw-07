@@ -32,9 +32,6 @@
     }
 }
 
-
-
-
 .portfolio__button--current {
     color: var(--white-cl);
     background-color: var(--accent-txt-cl);
@@ -64,12 +61,6 @@
     }
 }
 
-.portfolio__item:hover .portfolio__card--text {
-    transform: translateY(0);
-}
-
-
-
 .portfolio__card--text {
     position: absolute;
     top: 0;
@@ -81,13 +72,15 @@
     line-height: calc(28 / 18);
     letter-spacing: 0.03em;
     text-align: left;
-
     background-color: rgba(33, 150, 243, 0.9);
     padding: 63px 24px;
     height: 100%;
     transform: translateY(100%);
     transition: transform var(--transition);
     overflow: auto;
+    .portfolio__item:hover & {
+        transform: translateY(0);
+    }
 }
 
 .portfolio__card--wrap {

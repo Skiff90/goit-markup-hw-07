@@ -7,9 +7,7 @@
     transition: opacity var(--modal-transition), visibility var(--modal-transition);
 }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0);
-}
+
 
 /* коли сховано */
 .is-hidden {
@@ -33,6 +31,9 @@
     transition: transform var(--modal-transition), opacity var(--modal-transition),
         visability var(--modal-transition);
     padding: 40px;
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0);
+    }
 }
 
 .modal__button--close {
@@ -100,27 +101,28 @@
     padding-left: 42px;
     outline-color: transparent;
     &:focus {
-            color: var(--accent-txt-cl);
-            border: 3px solid var(--accent-txt-cl);
-            border-radius: 4px;
-            transition: var(--transition);
-        }
+        color: var(--accent-txt-cl);
+        border: 3px solid var(--accent-txt-cl);
+        border-radius: 4px;
+        transition: var(--transition);
+    }
 }
 
 
 
-/* щоб фокус на вікні вводу ціпляв зміну 
-кольору іконки  */
-.modal__input--client:focus+.modal__input--icon {
-    fill: var(--accent-txt-cl);
-    transition: var(--transition);
-}
+
 
 .modal__input--icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 12px;
+    /* щоб фокус на вікні вводу ціпляв зміну 
+    кольору іконки  */
+    .modal__input--client:focus+& {
+        fill: var(--accent-txt-cl);
+        transition: var(--transition);
+    }
 }
 
 .modal__comment {
@@ -136,11 +138,11 @@
     border-radius: 4px;
     outline-color: transparent;
     &:focus {
-            color: var(--accent-txt-cl);
-            border: 3px solid var(--accent-txt-cl);
-            border-radius: 4px;
-            transition: var(--transition);
-        }
+        color: var(--accent-txt-cl);
+        border: 3px solid var(--accent-txt-cl);
+        border-radius: 4px;
+        transition: var(--transition);
+    }
 }
 
 

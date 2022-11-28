@@ -140,11 +140,6 @@ body {
   transition: opacity var(--modal-transition), visibility var(--modal-transition);
 }
 
-.backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(0);
-          transform: translate(-50%, -50%) scale(0);
-}
-
 /* коли сховано */
 .is-hidden {
   opacity: 0;
@@ -170,6 +165,10 @@ body {
   transition: transform var(--modal-transition), opacity var(--modal-transition), visability var(--modal-transition);
   transition: transform var(--modal-transition), opacity var(--modal-transition), visability var(--modal-transition), -webkit-transform var(--modal-transition);
   padding: 40px;
+}
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
 }
 
 .modal__button--close {
@@ -252,20 +251,19 @@ body {
   transition: var(--transition);
 }
 
-/* щоб фокус на вікні вводу ціпляв зміну 
-кольору іконки  */
-.modal__input--client:focus + .modal__input--icon {
-  fill: var(--accent-txt-cl);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-
 .modal__input--icon {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 12px;
+  /* щоб фокус на вікні вводу ціпляв зміну 
+  кольору іконки  */
+}
+.modal__input--client:focus + .modal__input--icon {
+  fill: var(--accent-txt-cl);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 
 .modal__comment {
@@ -448,11 +446,6 @@ body {
           box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio__item:hover .portfolio__card--text {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
 .portfolio__card--text {
   position: absolute;
   top: 0;
@@ -474,6 +467,10 @@ body {
   transition: transform var(--transition);
   transition: transform var(--transition), -webkit-transform var(--transition);
   overflow: auto;
+}
+.portfolio__item:hover .portfolio__card--text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .portfolio__card--wrap {
@@ -563,8 +560,6 @@ body {
 .nav__link--current {
   color: var(--accent-txt-cl);
 }
-
-/* лінія підкреслення */
 .nav__link--current::after {
   content: "";
   display: block;

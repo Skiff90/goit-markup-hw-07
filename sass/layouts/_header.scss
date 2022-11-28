@@ -62,25 +62,19 @@
 
 .nav__link--current {
     color: var(--accent-txt-cl);
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        background-color: var(--accent-txt-cl);
+        border-radius: 2px;
+        transition: color var(--transition);
+    }
 }
-
-/* лінія підкреслення */
-.nav__link--current::after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-txt-cl);
-    border-radius: 2px;
-    transition: color var(--transition);
-}
-
-
-
-
 
 .contact__items {
     display: flex;
