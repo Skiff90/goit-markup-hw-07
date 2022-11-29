@@ -2,9 +2,10 @@
 .card-set {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: var(--index__current-gap);
 }
 
 .flex-basis {
-    flex-basis: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - (var(--index__nunber-of-indentations) * var(--index__current-gap))) / var(----index__number-of-cards));
 }
+
