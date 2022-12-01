@@ -5,7 +5,11 @@
     gap: var(--index__current-gap);
 }
 
-.flex-basis {
-    flex-basis: calc((100% - (var(--index__nunber-of-indentations) * var(--index__current-gap))) / var(----index__number-of-cards));
+.card-items {
+    width: calc((100% - (var(--index__nunber-of-indentations) * var(--index__current-gap))) / var(--index__number-of-cards));
+}
+
+.portfolio__item {
+    width: calc ((100% - (var(--portfolio__nunber-of-indentations) * var(--portfolio__current-gap))) / var(--portfolio__number-of-cards));
 }
 
