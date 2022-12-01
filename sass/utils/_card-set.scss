@@ -2,14 +2,14 @@
 .card-set {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--index__current-gap);
+    gap: var(--indexCurrentGap);
 }
 
 .card-items {
-    width: calc((100% - (var(--index__nunber-of-indentations) * var(--index__current-gap))) / var(--index__number-of-cards));
+    width: calc((100% - (var(--indexNumberOfIndentations) * var(--indexCurrentGap))) / var(--indexNumberOfCards));
 }
 
 .portfolio__item {
-    width: calc ((100% - (var(--portfolio__nunber-of-indentations) * var(--portfolio__current-gap))) / var(--portfolio__number-of-cards));
+    width: calc ((100% - (var(--portfolioNumberOfIndentations) * var(--portfolioCurrentGap))) / var(--portfolioNumberOfCards));
 }
 
