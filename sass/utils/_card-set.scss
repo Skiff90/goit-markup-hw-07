@@ -6,10 +6,10 @@
 }
 
 .flex-basis {
-    width: calc((100% - (var(--indexNumberOfIndentations) * var(--indexCurrentGap))) / var(--indexNumberOfCards));
+    flex-basis: calc((100% - (var(--indexCurrentGap) * var(--numberOfIndentations))) / var(--indexNumberOfCards));
 }
 
 .portfolio__item {
-    width: calc ((100% - (var(--portfolioNumberOfIndentations) * var(--portfolioCurrentGap))) / var(--portfolioNumberOfCards));
+    flex-basis: calc((100% - var(--portfolioCurrentGap) * (var(--numberOfIndentations) - 1)) / var(--portfolioNumberOfCards));;
 }
 
